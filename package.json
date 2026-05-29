@@ -1,0 +1,12 @@
+{
+  "name": "email-sender-042ea0",
+  "version": "1.0.0",
+  "description": "A email-sender utility",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["email-sender", "utility"],
+  "license": "MIT"
+}
