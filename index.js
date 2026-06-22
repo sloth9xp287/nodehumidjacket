@@ -1,6 +1,6 @@
 'use strict';
 const os = require('os');
-const APP_NAME = 'email-sender-042ea0';
+const APP_NAME = 'email-sender-980f3d';
 const VERSION = '1.0.0';
 class UemailUsenderHandler {
   constructor(options = {}) {
